@@ -6,9 +6,13 @@ Este projeto realiza a extração (web scraping) de dados de hospedagens na plat
 
 ## 📅 Sobre os dados
 
-Os dados foram **coletados via scraping** no dia **22 de julho de 2025**, por volta das **21h (horário de Brasília)**, a partir de uma pesquisa por acomodações em **Copacabana (RJ)** para estadias **flexíveis (uma semana) durante o mês de dezembro de 2025**.
+Os dados foram **coletados via scraping** no dia **23 de julho de 2025**, por volta das **20h (horário de Brasília)**, a partir de uma pesquisa por acomodações em **Copacabana (RJ)** para estadias **flexíveis (uma semana) durante o mês de dezembro de 2025**.
 
 ⚠️ Como o Airbnb atualiza seus anúncios com frequência, **os resultados obtidos aqui são apenas uma amostra momentânea**. Se você executar o código novamente, os dados coletados serão provavelmente diferentes.
+
+### Desafios e Manutenção do Scraping
+
+É importante notar que, devido à natureza dinâmica de plataformas como o Airbnb, as classes HTML utilizadas para identificar elementos na página podem ser alteradas. Durante o desenvolvimento deste projeto, foi necessária uma **atualização no script de scraping (`script/scraping.py`)** para adaptar-se a uma mudança na classe específica que capturava as avaliações dos imóveis. Essa modificação foi crucial para garantir a coleta correta e completa dos dados, permitindo a continuidade da Análise Exploratória de Dados (EDA) com informações precisas.
 
 ---
 
