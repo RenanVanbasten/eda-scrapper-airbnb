@@ -86,7 +86,7 @@ try:
                 subtitle = subtitle_tag.text.strip()
 
             # Avaliação
-            rating_div = card.find('div', class_='t1a9j9y7')
+            rating_div = card.find('div', class_='t1phmnpa')
             if rating_div:
                 rating_span = rating_div.find('span', class_='a8jt5op')
                 if rating_span:
