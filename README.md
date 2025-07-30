@@ -16,6 +16,20 @@ Os dados foram **coletados via scraping** no dia **23 de julho de 2025**, por vo
 
 ---
 
+## ⚙️ Sobre o ETL (`scripts/etl_airbnb.py`)
+
+Para tornar o processo de tratamento dos dados mais modular e reutilizável, foi criado um **script separado de ETL (Extract, Transform, Load)**.  
+
+Esse script realiza:
+
+- **`extract()`**: leitura do arquivo bruto `.csv` com os dados coletados.
+- **`transform()`**: limpeza e transformação das colunas, como separação das notas e número de avaliações, e padronização dos preços.
+- **`load()`**: exportação do novo DataFrame limpo para outro arquivo `.csv`.
+
+Com isso, o Jupyter Notebook (`notebooks/analysis.ipynb`) fica mais focado **nas análises visuais**, e todo o pré-processamento de dados fica isolado e reutilizável no script ETL.
+
+---
+
 ## 📁 Estrutura do Projeto
 
 ```text
@@ -24,14 +38,16 @@ airbnb_project/
 │   └── airbnb_listings.csv
 ├── notebooks/        # Análises exploratórias com Jupyter
 │   └── analysis.ipynb
-├── reports/
+├── reports/          # Relatórios e visualizações geradas
 │   ├── images/
 │   │   ├── distribuicao_precos.png
 │   │   └── preco_vs_avaliacao.png
 │   └── report.md
-├── scripts/          # Código de scraping em Python
+├── scripts/          # Scripts Python (scraping e ETL)
 │   └── scraping.py
+│   └── etl_airbnb.py
 └── README.md         # Este arquivo
+└── requirements.txt  # Bibliotecas necessárias para rodar o projeto
 
 ```
 
@@ -49,6 +65,8 @@ airbnb_project/
 - Quantidade de anúncios encontrados
 - Distribuição de preços por noite
 - Médias de avaliações dos hóspedes
+- Boxplot de preços por noite
+- Dispersão entre preço e número de avaliações
 - Exploração de títulos e descrições das acomodações
 
 ---
